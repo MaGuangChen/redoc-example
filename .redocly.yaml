@@ -1,0 +1,26 @@
+# See https://redocly.com/docs/cli/configuration/ for more information.
+apis:
+  file@v1:
+    root: root.yaml
+    labels:
+      - service-example
+lint:
+  extends:
+    - recommended
+  rules:
+    no-unused-components: error
+features.openapi:
+  schemaExpansionLevel: 2
+  showConsole: true
+  htmlTemplate: ../public/index.html
+  theme:
+    colors:
+      primary:
+        main: "#32329f"
+  generateCodeSamples:
+    languages:  # Array of language config objects; indicates in which languages to generate code samples.
+      - lang: curl
+      - lang: Node.js
+      - lang: JavaScript
+      - lang: Golang
+      - lang: Python
